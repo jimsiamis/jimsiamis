@@ -1,0 +1,31 @@
+import pygame
+import random
+
+# Αρχικοποίηση της Pygame
+pygame.init()
+
+# Χρώματα RGB
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+
+# Παράθυρο παιχνιδιού
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 600
+window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+pygame.display.set_caption("Flappy Mario")
+
+# Φόντο
+background_img = pygame.image.load("background.png").convert()
+
+# Παιχνίδι με τον Μάριο
+mario_img = pygame.image.load("mario.png").convert()
+mario_x = 200
+mario_y = 300
+
+# Σωλήνες
+pipe_up_img = pygame.image.load("pipe_up.png").convert()
+pipe_down_img = pygame.image.load("pipe_down.png").convert()
+pipe_x = WINDOW_WIDTH
+pipe_gap = 200
+pipe_height = 400
+pipe_y = random.randint(pipe_gap
